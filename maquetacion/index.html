@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="icon" type="favicon/x-icon" href="img/safari.png" />
+        <title>Maquetacion Responsive HTML y CSS</title>
+    </head>
+    <body>
+        <!--INICIO DE LA CABECERA-->
+        <header id="header">
+            <div class="wrap">
+                <div id="logotype">
+                    <span class="icon">S</span> 
+                    <h2>Blog</h2>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Formación</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="clearfix"></div>
+                
+            </div>
+        </header>
+        <!--FIN DE LA CABECERA-->
+
+        <div class="wrap">
+            <!--INICIO BANNER-->
+            <div class="info">
+                <div id="banner">
+                    <h1>Cursos de desarrollo web con Adrián</h1>
+                </div>
+            </div>            
+            <!--FIN BANNER-->
+
+            <!--INICIO TARJETAS-->
+        
+            <div class="card">
+                <p class="icon">H</p>
+                <h2>Desarrollo Web</h2>
+                <p>Aprende los principales lenguajes para desarrollar webs ¡Conviente en un webmaster!</p>
+            </div>
+            <div class="card">
+                <p class="icon">_</p>
+                <h2>Sistemas Operativos</h2>
+                <p>Aprende a administrar sistemas Linux y Windows.</p>
+            </div>
+            <div class="card">
+                <p class="icon">S</p>
+                <h2>Hardware</h2>
+                <p>Conoce los entresijos del hardware.</p>
+            </div>
+            <div class="card">
+                <p class="icon">u</p>
+                <h2>Redes e Internet</h2>
+                <p>Aprende a configurar y administrar redes informaticas y servidores.</p>
+            </div>
+            <div class="card">
+                <p class="icon">a</p>
+                <h2>Bases de Datos</h2>
+                <p>Aprende a montar y administrar bases de datos.</p>
+            </div>
+            <div class="card">
+                <p class="icon">F</p>
+                <h2>Gestor de Archivos</h2>
+                <p>Aprende a gestionar archivos como un verdadero profesional.</p>
+            </div>
+            <div class="clearfix"></div>
+        <!--FIN TARJETAS-->
+        </div>
+
+        <div class="wrap">
+            <!--INICIO SIDEBAR-->
+            <aside id="sidebar">
+                
+                <h3 class="section-title">Buscar</h3>
+                <div id="search">
+                    <form>
+                        <input type="text">
+                        <input type="submit" class="icon" value="L">
+                    </form>
+                </div>
+            
+                <h3 class="section-title">Login</h3>
+                <div class="box" id="login">
+                    <form>
+                        <div class="field">
+                            <label class="icon" for="user" id="user-label">U</label>
+                            <input type="text" id="user">
+                        </div>
+                        <div class="field">
+                            <label class="icon" for="pwd" id="pwd-label">w</label>
+                            <input type="password" autocomplete="new-password" id="pwd">
+                        </div>
+                        <input type="submit" value="Entrar" class="login-button">
+                        <input type="reset" value="Limpiar" class="login-button">
+                    </form>
+                    <a href="#">Registrate aqui</a>
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                </div>
+            
+                <h3 class="section-title">Redes Sociales</h3>
+                <div class="box" id="social">
+                    <div class="icon">
+                        <a href="#">t</a>
+                        <p class="overlay">Twitter</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#">f</a>
+                        <p class="overlay">Facebook</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#">g</a>
+                        <p class="overlay">Google Plus</p>
+                    </div>
+                    <div class="icon">
+                        <a href="#">y</a>
+                        <p class="overlay">YouTube</p>
+                    </div>
+                </div>
+            
+                <h3 class="section-title">Colaboradores</h3>
+                <div class="box" id="sponsors"></div>
+                
+            </aside>
+            <!--FIN SIDEBAR-->
+            <!--INICIO MAIN-->
+            <main id="main">
+                <h2 class="section-title" id="main-title">Ultimos articulos</h2>
+                <article class="article box">
+                    <div class="article-time">
+                        <span>
+                            <time datetime="2026-10-29">Fecha: 29 oct</time>
+                        </span>
+                        <span>Categoria: Prueba</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">Titulo del Articulo</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed accumsan nunc. Morbi ut lectus id magna posuere mollis id feugiat tellus. Praesent eu ultricies tortor. Duis varius, massa eget varius tincidunt, orci nisl vulputate libero, vitae facilisis lectus ipsum vel dolor. Sed faucibus elit quis lorem dictum, ac eleifend metus dictum. Duis ac lorem vestibulum, mattis orci sed, dapibus dolor. Sed nec tempor turpis. Nam suscipit ornare est in porta dolor ep ipsum. <a href="#">Leer más</a></p>
+                </article>
+                 <article class="article box">
+                    <div class="article-time">
+                        <span>
+                            <time datetime="2026-10-29">Fecha: 29 oct</time>
+                        </span>
+                        <span>Categoria: Prueba</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">Titulo del Articulo</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed accumsan nunc. Morbi ut lectus id magna posuere mollis id feugiat tellus. Praesent eu ultricies tortor. Duis varius, massa eget varius tincidunt, orci nisl vulputate libero, vitae facilisis lectus ipsum vel dolor. Sed faucibus elit quis lorem dictum, ac eleifend metus dictum. Duis ac lorem vestibulum, mattis orci sed, dapibus dolor. Sed nec tempor turpis. Nam suscipit ornare est in porta dolor ep ipsum. <a href="#">Leer más</a></p>
+                </article>
+                 <article class="article box">
+                    <div class="article-time">
+                        <span>
+                            <time datetime="2026-10-29">Fecha: 29 oct</time>
+                        </span>
+                        <span>Categoria: Prueba</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">Titulo del Articulo</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed accumsan nunc. Morbi ut lectus id magna posuere mollis id feugiat tellus. Praesent eu ultricies tortor. Duis varius, massa eget varius tincidunt, orci nisl vulputate libero, vitae facilisis lectus ipsum vel dolor. Sed faucibus elit quis lorem dictum, ac eleifend metus dictum. Duis ac lorem vestibulum, mattis orci sed, dapibus dolor. Sed nec tempor turpis. Nam suscipit ornare est in porta dolor ep ipsum. <a href="#">Leer más</a></p>
+                </article>
+                 <article class="article box">
+                    <div class="article-time">
+                        <span>
+                            <time datetime="2026-10-29">Fecha: 29 oct</time>
+                        </span>
+                        <span>Categoria: Prueba</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">Titulo del Articulo</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed accumsan nunc. Morbi ut lectus id magna posuere mollis id feugiat tellus. Praesent eu ultricies tortor. Duis varius, massa eget varius tincidunt, orci nisl vulputate libero, vitae facilisis lectus ipsum vel dolor. Sed faucibus elit quis lorem dictum, ac eleifend metus dictum. Duis ac lorem vestibulum, mattis orci sed, dapibus dolor. Sed nec tempor turpis. Nam suscipit ornare est in porta dolor ep ipsum. <a href="#">Leer más</a></p>
+                </article>
+                <article class="article box">
+                    <div class="article-time">
+                        <span>
+                            <time datetime="2026-10-29">Fecha: 29 oct</time>
+                        </span>
+                        <span>Categoria: Prueba</span>
+                    </div>
+                    <h3 class="article-title"><a href="#">Titulo del Articulo</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed accumsan nunc. Morbi ut lectus id magna posuere mollis id feugiat tellus. Praesent eu ultricies tortor. Duis varius, massa eget varius tincidunt, orci nisl vulputate libero, vitae facilisis lectus ipsum vel dolor. Sed faucibus elit quis lorem dictum, ac eleifend metus dictum. Duis ac lorem vestibulum, mattis orci sed, dapibus dolor. Sed nec tempor turpis. Nam suscipit ornare est in porta dolor ep ipsum. <a href="#">Leer más</a></p>
+                </article>
+                <button class="article box" id="main-button">
+                    Ir al blog
+                </button>
+            </main>
+            <!--FIN MAIN-->
+            <div class="clearfix"></div>
+            <!--INICIO FOOTER-->
+            <footer id="footer">
+                <div class="wrap">
+                    <div class="section-footer">
+                        <h3 class="title-footer">Menú</h3>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Formación</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="section-footer">
+                        <h3 class="title-footer">¿Dónde Estamos?</h3>
+                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11966.169462509404!2d2.224630959167495!3d41.42745185544908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a5d5ef267cd5%3A0x5d9229044102278b!2sMirador%20Parque%20Bes%C3%B2s!5e0!3m2!1ses!2ses!4v1793273137107!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                    <div class="section-footer">
+                        <h3 class="title-footer">Desarrollado con</h3>
+                        <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Herramientas con las que se ha desarrollado" id="gadgets">
+                        <h3 class="title-footer">Optimizado para</h3>
+                        <div id="logos">
+                            <img src="img/firefox-icon.png" alt="Icono de firefox">
+                            <img src="img/chrome.png" alt="Icono de chrome">
+                            <img src="img/Opera_256x256.png" alt="Icono de opera">
+                            <img src="img/safari.png" alt="Icono de safari">
+                            <img src="img/android.png" alt="Icono de android">
+                            <img src="img/ios.png" alt="Icono de apple">
+                        </div>
+                        <h3 class="title-footer">Autor</h3>
+                        <p>&copy; Adrián Morató - <a href="#">adrianmorato.com</a></p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!--FIN FOOTER-->
+        </div>
+        
+    </body>
+</html>

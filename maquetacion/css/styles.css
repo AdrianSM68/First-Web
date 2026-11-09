@@ -1,0 +1,722 @@
+/*FUENTES PERSONALIZADAS*/
+@font-face {
+    font-family: symbols;
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?iefix)format("embeded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("fonts/websymbols-regular-webfont.svg") format("svg");
+        font-weight: normal;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: trebuchet;
+    src: url(fonts/TrebuchetMS.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*ESTILOS GENERALES*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-image: url(../img/pattern.png);
+}
+
+.icon{
+    font-family: symbols !important;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+/*ESTILOS CABECERA*/
+#header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-family: bebas;
+}
+
+#header *{
+    text-transform: uppercase;
+}
+
+.wrap{
+    width: 80%;
+    margin: 0px auto;
+}
+
+#logotype{
+    float: left;
+    width: 200px;
+    height: 30px;
+    background-color: #37BCF9;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden; /*Esto es para las transiciones*/
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 300ms;
+}
+
+#logotype:hover{
+    color: black;
+    background-color: #ccc;
+    border-radius: 2px;
+}
+
+#logotype span, #logotype h1{
+    display: block;
+}
+
+#logotype span{
+    width: auto;
+    height: auto;
+    margin-left: 26px;
+    font-size:30px;
+    margin-top: -5px;
+    float: left;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#logotype:hover span{
+    animation-name: appear-gear;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes appear-gear{
+    0%{
+        transform: translateY(0%);
+    }50%{
+        transform: translateY(200%);
+    }100%{
+        transform: translateY(0%);
+    }
+}
+
+#logotype:hover h2{
+    animation: appear-text 300ms linear;
+}
+
+@keyframes appear-text{
+    0%{
+        transform: translateX(250%);
+    }100%{
+        transform: translateX(0%);
+    }
+}
+
+#logotype h2{
+    margin-right: 63px;
+    font-size:40px;
+    margin-top: -7px;
+    float: right;
+}
+
+/*ESTILOS MENU*/
+#menu{
+    height: 70px;
+    float: right;
+    margin-right: 15%;
+}
+
+#menu ul{
+    list-style-type: none;
+}
+
+#menu ul li{
+    float: left;
+}
+
+#menu ul li a{
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    line-height: 70px;
+    letter-spacing: 1px;
+    transition: all 300ms;
+}
+
+#menu ul li a:hover{
+    color: #37BCF9;
+    transform: scale(1.2, 1.2); /*El transform modifica visualmente sin afectar a la estructura de la página, paddings, márgenes y todo eso*/
+}
+
+/*ESTILOS BANNER*/
+
+#banner{
+    width: 95.6%;
+    margin: 20px auto;
+    background-color: white;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    height: 100px;
+    overflow: hidden;
+    background-image: url(../img/bakbaner.png);
+    background-position: -200px -200px;
+    animation: banner-animation 10s linear;
+}
+
+@keyframes banner-animation{
+    from{
+        background-position: 0px 0px;
+    }to{
+        background-position: -200px -200px;
+    }
+}
+
+#banner h1{
+    text-transform: uppercase;
+    color: white;
+    font-family: bebas;
+    font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 1px black;
+    animation: showText 10s linear;
+}
+
+@keyframes showText{
+    0%{
+        transform: translateX(-400%) scale(5,5);
+        transform: scale(5,5);
+        opacity: 1;
+    }50%{
+        transform: translateX(400%) scale(5,5);
+        opacity: 1;
+    }75%{
+        transform: translateX(-400%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0; 
+    }100%{
+        transform: translateX(0%) scale(1,1);
+        opacity: 1;
+        color: white;
+        text-shadow: 2px 2px 1px black;
+    }
+}
+
+/*ESTILOS TARJETAS*/
+/* ASUMO QUE FORMA CORRECTA PERO NO LA HEMOS DADO EN EL CURSO
+#cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}*/
+
+.card{
+    width: 205px;
+    min-height: 305px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    margin: 0px 24px;
+    margin-top: 40px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+.card:hover{
+    background-color: black;
+}
+
+.card *{
+    width: 100%;
+    text-align: center;
+    font-family: trebuchet;
+}
+
+.card > .icon{
+    font-size: 50px;
+    height: 80px;
+    line-height: 80px;
+    color: black !important;
+    transition: all 100ms;
+}
+
+.card > h2,.card p{
+    color: #00538C;
+    margin: 20px 0px;
+}
+
+.card > h2{
+    height: 35px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.card > p{
+    font-size: 15px;
+}
+
+.card:hover h2{
+    color: white;
+    animation: appearCardHText 250ms linear;
+}
+
+.card:hover p{
+    color: white;
+    animation: appearCardText 300ms linear;
+}
+
+.card:hover .icon{
+    font-size: 70px;
+    color: #37BCF9 !important;
+    animation: appearCardIcon 200ms linear;
+}
+
+@keyframes appearCardHText{
+    0%{
+        transform: translateY(-300%);
+        color: black;
+    }
+    100%{
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+@keyframes appearCardText{
+    0%{
+        transform: translateX(-100%);
+        color: black;
+    }
+    100%{
+        transform: translateX(0%);
+        color: white;
+    }
+}
+
+@keyframes appearCardIcon {
+    0%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/*ESTILOS DEL ASIDE*/
+#sidebar{
+    width: 300px;
+    min-height: 1200px;
+    margin-top: 100px;
+    font-family: trebuchet;
+    float: right;
+    margin: 30px;
+}
+
+.section-title{
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 49px;
+    font-family: bebas;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    background-color: white;
+    background-image: url(../img/pxgray.png);
+}
+
+#sidebar > .section-title:first-child{
+    margin-top: 0px;
+}
+
+#sidebar input[type="text"], #sidebar input[type="password"]{
+    width:85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+    transition: all 300ms;
+}
+
+#sidebar input[type="text"]:focus, #sidebar input[type="password"]:focus{
+    color: #555;
+    outline: none;
+}
+
+#sidebar input[type="submit"]{
+    height: 30px;
+    cursor: pointer;
+    size: 16px;
+    border: none;
+    border-left: 1px solid #ccc;
+    background-color: transparent;
+    color: #555;
+    padding-left: 6px;
+}
+
+#search, .field{
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px #ccc inset;
+}
+
+.field{
+    box-shadow: 0px -1px 2px #ccc;
+    margin: 10px auto;
+}
+
+#login .field:nth-child(2){
+    margin: 20px auto;
+}
+
+.field label{
+    cursor:text;
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+#pwd-label{
+    font-size: 18px;
+    padding-right: 5px;
+    padding-left: 8px;
+}
+
+.box{
+    width: 85%;
+    background-color: white;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 0px white inset, 0px -3px 2px rgba(0,0,0,0.3) inset;
+    height: 240px;
+    padding: 15px 0px;
+    margin: 20px auto;
+}
+
+#sidebar .login-button[type="submit"],#sidebar .login-button[type="reset"]{
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+    line-height: 33px;
+    background:linear-gradient(to bottom,#3eb8e5 0%, #2ca0ca 100%);
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 17px;
+    border: none;
+    border-top: 1px solid #156785;
+    border-bottom: 1px solid #156785;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#sidebar .login-button[type="submit"]:hover,#sidebar .login-button[type="reset"]:hover{
+    box-shadow: 0px 0px 3px #156785;
+}
+
+#sidebar > #login > a{
+    display: block;
+    width: auto;
+    color: #555;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-decoration: none; 
+    transition: all 200ms;
+}
+
+#sidebar > #login > a:hover{
+    text-decoration: underline;
+    color: #2f78bc;
+}
+
+
+#social{
+    padding: 0px;
+}
+
+#social > div{
+    padding: 10px 20px;
+}
+
+#social > div > a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#social .overlay{
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background-color: #F4F7FE;
+    position: absolute;
+    padding:5px;
+    margin-left: 50px;
+    margin-top: -34px;
+    transform: translateX(-80%);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+#sponsors{
+    color: white;
+}
+
+/*ESTILOS DEL MAIN*/
+#main{
+    width: 70%;
+    margin-left: 24px;
+    float: left;
+}
+
+#main-title{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article{
+    width: 97%;
+    height: auto;
+    margin: 40px auto;
+    font-family: trebuchet;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    padding: 10px;
+}
+
+.article h3{
+    display: block;
+    font-weight: bold;
+    font-size: 23px;
+    margin: 5px;
+}
+
+.article h3 a{
+    color: #00538C;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.article h3 a:hover{
+    text-decoration: underline;
+}
+
+.article .article-time{
+    float: right;
+    background-color: #393D3F;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    margin: -10px;
+    padding: 4px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.article .article-time span{
+    margin: 5px;
+}
+
+.article p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.article p a{
+    text-decoration: none;
+    color: #00538C;
+    transition: all 200ms;
+}
+
+.article p a:hover{
+    text-decoration: underline;
+}
+
+#main-button{
+    color:#00538C;
+    text-transform: uppercase;
+    font-family: bebas;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 35px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 1s;
+}
+
+#main-button:hover{
+    background-color: #333;
+    border: 10px solid #37BCF9;
+    text-shadow: 1px 1px 1px  black, 1px 2px 1px  black, 1px 3px 1px  black, 1px 4px 1px  black, 1px 5px 1px  black;
+    color: white;
+    border-radius: 240px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px gray;
+    animation: blink 10s infinite linear;
+}
+
+@keyframes blink{
+    0%{
+        border: 10px solid #37BCF9;
+    }25%{
+        border: 10px solid green;
+    }50%{
+        border: 10px solid greenyellow;
+    }75%{
+        border: 10px solid yellow;
+    }100%{
+        border: 10px solid #37BCF9;
+    }
+}
+
+/*ESTILOS DEL FOOTER*/
+
+#footer{
+    background-color: black;
+}
+
+.section-footer{
+    width: 33%;
+    float: left;
+    margin-top: 34px;
+}
+
+.title-footer{
+    width: 80%;
+    height: 50px;
+    line-height: 55px;
+    font-family: bebas;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background-image: url(../img/pxgray.png);
+    background-color: white;
+    border-radius: 5px;
+    margin: 0px auto;
+}
+
+.section-footer ul{
+    width: 80%;
+    margin: 10px auto;
+    padding-left: 45px;
+}
+
+.section-footer ul li{
+    color: white;
+    font-size: 25px;   
+    border-bottom: 1px solid #cccccca9;
+}
+
+.section-footer ul li a{
+    display: block;
+    width: 60%;
+    display: block;
+    font-family: trebuchet;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color:#3eb8e5;
+    transition: all 300ms;
+}
+.section-footer ul li:hover a{
+    color: white;
+    padding-left: 40px;
+}
+
+.section-footer #map{
+    display: block;
+    width: 75%;
+    aspect-ratio: 1/1;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+
+#gadgets{
+    display: block;
+    width: 65%;
+    margin: 15px auto;
+}
+
+#logos{
+    width: 75%;
+    margin: 10px auto;
+}
+
+#logos img{
+    width: 15%;
+}
+
+.section-footer p{
+    margin-top: 15px;
+    font-family: trebuchet;
+    text-align: center;
+    color: white;
+}
+
+.section-footer p a{
+    color: white;
+    transition:all 200ms;
+    text-decoration: none;
+}
+.section-footer p a:hover{
+    color:#37BCF9;
+    text-decoration: underline;
+}
